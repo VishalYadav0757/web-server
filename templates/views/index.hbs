@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <title>Weather</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/images/icon" />
+</head>
+
+<body>
+  {{>header}}
+  <section class="home-wrpr">
+    <p class="home-desc">{{desc}}</p>
+    <img
+      src="https://media1.thehungryjpeg.com/thumbs2/ori_3588100_9szztmqt9kuqj0ly3q7gu1dk3tflkvcastpuj95l_sun-icon-with-clouds.jpg"
+      alt="weather-img" width="250px" />
+  </section>
+  <section class="form-wrpr">
+    <form>
+      <input placeholder="Search for location..." />
+      <button>Search</button>
+    </form>
+    <div class="result-wrpr">
+      <p id="errorMsg"></p>
+      <p id="forecastMsg"></p>
+    </div>
+
+  </section>
+  {{>footer}}
+
+  <script src="/js/app.js"></script>
+</body>
+
+</html>
