@@ -89,5 +89,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("Server is up and running !! \nVisit :- http://localhost:3030");
+  console.log("Server is up and running !!");
 });

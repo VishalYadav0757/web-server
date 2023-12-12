@@ -19,10 +19,7 @@ formData.addEventListener("submit", (e) => {
   errorMsg.textContent = "Loading...";
   forecastMsg.textContent = "";
 
-  fetch(
-    "https://weather-forecast-t5v0.onrender.com/weather?address=" +
-      searchText?.value
-  ).then((response) => {
+  fetch("/weather?address=" + searchText?.value).then((response) => {
     response.json().then((data) => {
       weatherData(data);
     });
