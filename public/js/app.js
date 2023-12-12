@@ -19,11 +19,12 @@ formData.addEventListener("submit", (e) => {
   errorMsg.textContent = "Loading...";
   forecastMsg.textContent = "";
 
-  fetch("http://localhost:3000/weather?address=" + searchText?.value).then(
-    (response) => {
-      response.json().then((data) => {
-        weatherData(data);
-      });
-    }
-  );
+  fetch(
+    "https://weather-forecast-t5v0.onrender.com/weather?address=" +
+      searchText?.value
+  ).then((response) => {
+    response.json().then((data) => {
+      weatherData(data);
+    });
+  });
 });
